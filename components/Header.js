@@ -24,8 +24,8 @@ const Header = () => {
                 <HeaderItem Icon={UserIcon} title='Account' />
             </div>
             <Image
-                onClick={() => router.push("/")}
-                className='object-contain hover:animate-pulse'
+                onClick={() => router.push("/login")}
+                className='object-contain hover:animate-pulse cursor-pointer'
                 width={200}
                 height={100}
                 src='/hulu-logo.svg'

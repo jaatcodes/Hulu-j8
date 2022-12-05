@@ -43,7 +43,7 @@ const Login = () => {
                     <span className='underline'>See Bundle details. </span>
                 </p>
                 <div
-                    onClick={() => router.push("/home")}
+                    onClick={() => router.push("/")}
                     className='pt-4 pb-8 text-white flex flex-col items-center underline text-xl cursor-pointer'>
                     Click Here to Explore Hulu
                     <ArrowDownCircleIcon className='h-6 animate-bounce opacity-80' />
