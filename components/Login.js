@@ -1,8 +1,12 @@
+import { ArrowDownCircleIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 const Login = () => {
+    const router = useRouter();
+
     return (
-        <section className='w-full h-screen min-h-full bg-center bg-hulu'>
+        <section className='overflow-hidden w-full h-screen min-h-full bg-center bg-hulu'>
             <nav className='flex items-center justify-between px-6 max-h-12 max-w-7xl mx-auto'>
                 <Image
                     className='object-contain hover:animate-pulse'
@@ -15,7 +19,7 @@ const Login = () => {
                     LOG IN
                 </button>
             </nav>
-            <div className='flex flex-col items-center justify-center h-full  max-w-6xl mx-auto px-8 py-12'>
+            <div className=' flex flex-col items-center justify-center h-full  max-w-6xl mx-auto px-8 py-12'>
                 <p className='font-bold text-green-500 uppercase text-base md:text-xl'>
                     Bundle with any hulu plan & save
                 </p>
@@ -35,13 +39,15 @@ const Login = () => {
                     Get the disney bundle
                 </button>
                 <p className='font-sm text-gray-300 '>
-                    What's included?{" "}
+                    Whats included?
                     <span className='underline'>See Bundle details. </span>
                 </p>
-                <p className='text-white underline text-xl'>
-                    {" "}
-                    Sign up for Hulu only
-                </p>
+                <div
+                    onClick={() => router.push("/home")}
+                    className='pt-4 pb-8 text-white flex flex-col items-center underline text-xl cursor-pointer'>
+                    Click Here to Explore Hulu
+                    <ArrowDownCircleIcon className='h-6 animate-bounce opacity-80' />
+                </div>
             </div>
         </section>
     );
