@@ -10,6 +10,7 @@ const Login = () => {
             <nav className='flex items-center justify-between px-6 max-h-12 max-w-7xl mx-auto'>
                 <Image
                     className='object-contain hover:animate-pulse'
+                    alt=''
                     width={100}
                     height={100}
                     src='/hulu-logo.svg'

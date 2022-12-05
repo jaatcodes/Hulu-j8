@@ -7,8 +7,10 @@ const Thumbnail = ({ result }) => {
     return (
         <div className='group  p-4 cursor-pointer transition duration-200 ease-in transform sm:hover:scale-105 hover:z-50'>
             <Image
+                priority
                 className='rounded-3xl'
                 layout='responsive'
+                alt={result.title || result.original_name}
                 height={480}
                 width={720}
                 src={
