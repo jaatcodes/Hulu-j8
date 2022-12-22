@@ -5,10 +5,11 @@ const HeaderItem = ({ Icon, title }) => {
 
     const handleClick = () => {
         if (title === "Account") router.push("/login");
-        else if (title === "Trending") router.push("?genre=fetchTreanding");
-        else if (title === "Verified") router.push("?genre=fetchTopRated");
-        else if (title === "Collections") router.push("?genre=fetchMystery");
-        else return;
+        else if (title === "Search") router.push("/search");
+        else if (title === "Trending") router.push("/?genre=fetchTreanding");
+        else if (title === "Verified") router.push("/?genre=fetchTopRated");
+        else if (title === "Collections") router.push("/?genre=fetchMystery");
+        else return router.push("/");
     };
 
     return (

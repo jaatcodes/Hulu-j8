@@ -1,11 +1,30 @@
 import Image from "next/image";
 import { HandThumbUpIcon } from "@heroicons/react/24/outline";
+import Router, { useRouter } from "next/router";
 
 const Thumbnail = ({ result }) => {
     const BASE_IMG_URL = "https://image.tmdb.org/t/p/original";
+    const router = useRouter();
+
+    const handleClick = () => {
+        // router.push(
+        //     {
+        //         pathname: `/movies/${result.title || result.original_name}`,
+        //         query: {
+        //             result: JSON.stringify(result),
+        //         },
+        //     },
+        //     `/movies/${result.title || result.original_name}`,
+        // );
+        // console.log(result);
+
+        router.push(`/movie/${result.id}`);
+    };
 
     return (
-        <div className='group  p-4 cursor-pointer transition duration-200 ease-in transform sm:hover:scale-105 hover:z-50'>
+        <div
+            onClick={handleClick}
+            className='group  p-4 cursor-pointer transition duration-200 ease-in transform sm:hover:scale-105 hover:z-50'>
             <Image
                 priority
                 className='rounded-3xl'
@@ -14,7 +33,7 @@ const Thumbnail = ({ result }) => {
                 height={480}
                 width={720}
                 src={
-                    `${BASE_IMG_URL}${result.backdrop_path} ` ||
+                    `${BASE_IMG_URL}${result.backdrop_path}` ||
                     `${BASE_IMG_URL}${result.poster_path} `
                 }
             />

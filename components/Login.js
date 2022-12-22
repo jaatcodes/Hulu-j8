@@ -47,7 +47,7 @@ const Login = () => {
                     onClick={() => router.push("/")}
                     className='pt-4 pb-8 text-white flex flex-col items-center underline text-xl cursor-pointer'>
                     Click Here to Explore Hulu
-                    <ArrowDownCircleIcon className='h-6 animate-bounce opacity-80' />
+                    <ArrowDownCircleIcon className='mt-2 h-6 animate-bounce opacity-80' />
                 </div>
             </div>
         </section>
